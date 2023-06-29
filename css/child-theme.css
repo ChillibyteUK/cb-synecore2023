@@ -22504,26 +22504,46 @@ strong, b {
 #wrapper-navbar .navbar a {
   color: var(--col-dark);
 }
+#wrapper-navbar .navbar-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 100px;
+  gap: 1rem;
+}
 #wrapper-navbar .nav-item.current-menu-parent > a {
   color: var(--col-red);
 }
 #wrapper-navbar .nav-item.current-menu-item a, #wrapper-navbar .nav-item.current_page_item a {
   color: var(--col-red);
 }
-#wrapper-navbar a {
+#wrapper-navbar .navbar-collapse a {
   color: var(--col-dark);
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: var(--fw-900);
+  background-image: linear-gradient(var(--col-red), var(--col-red)), linear-gradient(transparent, transparent);
+  background-size: 0 5px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all var(--transition);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
-#wrapper-navbar a:hover {
+#wrapper-navbar .navbar-collapse a:hover {
   color: var(--col-red);
+  background-size: 100% 5px, auto;
 }
 #wrapper-navbar .dropdown-menu a {
   color: var(--col-dark);
 }
 #wrapper-navbar .dropdown-menu a:active {
   color: var(--col-red);
+}
+#wrapper-navbar .sidenav-container .navbar-toggler {
+  display: block;
+}
+#wrapper-navbar .sidenav-container .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(54, 54, 53, 0.25);
 }
 
 footer {
@@ -23021,7 +23041,7 @@ footer .footer__logo {
   background-size: 0 5px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
-  transition: all 0.2s ease-out;
+  transition: all var(--transition);
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;

@@ -27,7 +27,7 @@
             background-size: 0 5px, auto;
             background-repeat: no-repeat;
             background-position: center bottom;
-            transition: all .2s ease-out;
+            transition: all var(--transition);
             width: max-content;
         }
         &:hover {

@@ -82,20 +82,20 @@ wp_head();
         {
             "@context": "http://schema.org",
             "@type": "Organization",
-            "name": "Timber Rooms",
-            "url": "https://www.timberrooms.co.uk/",
-            "logo": "https://www.timberroooms.co.uk/wp-content/theme/cb-synecore2023/img/timberrooms-logo.png",
+            "name": "Synecore",
+            "url": "https://www.synecore.co.uk/",
+            "logo": "https://www.synecore.co.uk/wp-content/theme/cb-synecore2023/img/synecore-logo.jpg",
             "description": "...",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Unit 10, Newbrook Business Park, Pound Lane",
-                "addressLocality": "Upper Beeding",
-                "addressRegion": "West Sussex",
-                "postalCode": "BN44 3JD",
+                "streetAddress": "1 Conqueror Court",
+                "addressLocality": "Sittingbourne",
+                "addressRegion": "Kent",
+                "postalCode": "ME10 5BH",
                 "addressCountry": "UK"
             },
-            "telephone": "+44 (0) 1273 839491",
-            "email": "hello@timberrooms.co.uk"
+            "telephone": "+44 (0) 1795 509 509",
+            "email": "sales@synecore.co.uk"
         }
         }
     </script>
@@ -104,14 +104,11 @@ wp_head();
 
 <body <?php body_class(); ?>
     <?php understrap_body_attributes(); ?>>
-    <?php
-do_action('wp_body_open');
-/*
-?>
-<div id="wrapper-navbar" class="fixed-top p-0">
+    <?php do_action('wp_body_open'); ?>
+<div id="wrapper-navbar" class="fixed-top">
     <nav class="navbar navbar-expand-md p-0">
-        <div class="container-xl py-2 nav-top align-items-center">
-            <a href="/" class="logo" aria-label="Timber Rooms Homepage"></a>
+        <div class="container-xl py-2 nav-top align-items-center navbar-grid">
+            <a href="/" class="logo" aria-label="Synecore Homepage"><img src="<?=get_stylesheet_directory_uri()?>/img/synecore-logo.jpg"></a>
             <div class="button-container d-md-none">
                 <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
@@ -133,38 +130,36 @@ do_action('wp_body_open');
         'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
     )
 );
-*/
 ?>
-<div id="wrapper-navbar" class="fixed-top p-0">
-    <div class="topnav">
-        <a href="/" class="logo" aria-label="Timber Rooms Homepage"></a>
-        <div class="button-container text-end d-flex align-items-center justify-content-end d-md-none">
-            <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
-            aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-md p-0">
-        <div class="collapse navbar-collapse" id="navbar">
-                    <?php
-                    wp_nav_menu(
-    array(
-        'theme_location'  => 'primary_nav',
-        'container_class' => 'container-xl w-100',
-        'menu_class'      => 'navbar-nav justify-content-around',
-        'fallback_cb'     => '',
-        'menu_id'         => 'navbarr',
-        'depth'           => 3,
-        'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-    )
-);
-        ?>
+            </div>
+            <div class="sidenav-container d-none d-md-block">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidenav" aria-controls="sidenav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 </div>
-<!--            </div>
-        </div>
-    </nav>
-</div> -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sidenav" aria-labelledby="sidenavLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidenavLabel"></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location'  => 'sidebar_nav',
+                'container_class' => 'w-100',
+                'menu_class'      => 'navbar-nav justify-content-around',
+                'fallback_cb'     => '',
+                'menu_id'         => 'navbarr',
+                'depth'           => 3,
+                'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+            )
+        );
+        ?>
+    </div>
+</div>

@@ -1,11 +1,17 @@
 #wrapper-navbar {
-
+    // padding-right: 0px !important;
     .navbar {
         background-color: var(--col-light);
         // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
         a {
             color: var(--col-dark);
         }
+    }
+
+    .navbar-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr 100px;
+        gap: 1rem;
     }
 
     .nav-item {
@@ -19,13 +25,21 @@
             }
         }
     }
-    a {
+    .navbar-collapse a {
         color: var(--col-dark);
         text-decoration: none;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: var(--fw-900);
+        background-image: linear-gradient(var(--col-red), var(--col-red)), linear-gradient(transparent, transparent);
+        background-size: 0 5px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all var(--transition);
+        width: max-content;
+
         &:hover {
             color: var(--col-red);
+            background-size: 100% 5px, auto;
         }
     }
     .dropdown-menu {
@@ -34,6 +48,14 @@
             &:active {
                 color: var(--col-red);
             }
+        }
+    }
+
+    .sidenav-container .navbar-toggler {
+        display: block;
+        &:focus {
+            // box-shadow: none !important;
+            box-shadow: 0 0 0 0.25rem rgba(54,54,53,.25);
         }
     }
 }

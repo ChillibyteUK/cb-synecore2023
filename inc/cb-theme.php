@@ -69,6 +69,10 @@ function widgets_init()
     ));
 
     register_nav_menus(array(
+        'sidebar_nav' => __('Sidebar Nav', 'cb-synecore2023'),
+    ));
+
+    register_nav_menus(array(
         'footer_menu1' => __('Footer Menu 1', 'cb-synecore2023'),
     ));
     // register_nav_menus(array(
