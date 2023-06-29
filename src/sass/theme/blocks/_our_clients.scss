@@ -1,0 +1,33 @@
+.slick-autoplay-toggle-button:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+.our_clients {
+    &__arrows {
+        padding-top: 2.5rem;
+        display: grid;
+        gap: 1.5rem;
+        justify-content: center;
+        grid-template-columns: 25px 25px;
+        img {
+            cursor: pointer;
+        }
+    }
+    &__logo {
+        padding-inline: 1rem;
+        img {
+            aspect-ratio: 1;
+            object-fit: contain;
+            width: 100%;
+            max-width: 200px;
+            display: block;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.three_nav {
+    background-color: var(--col-red);
+    &__grid {
+        display: grid;
+        @media (min-width:768px) {
+            grid-template-columns: repeat(3,1fr);
+        }
+        a {
+            color: var(--col-light);
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr 4fr;
+            padding: 1rem;
+            img {
+                max-height: 50px;
+            }
+            p {
+                align-self: center;
+                margin-bottom: 0;
+                font-size: var(--fs-450);
+                font-weight: var(--fw-900);
+            }
+            transition: background-color var(--transition);
+            &:hover {
+                background-color: var(--col-red-200);
+                p {
+                    color: var(--col-light);
+                }
+            }
+        }
+    }
+}

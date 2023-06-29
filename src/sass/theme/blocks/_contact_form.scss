@@ -1,0 +1,26 @@
+.contact_form {
+    .social_icons {
+        display: flex;
+        gap: 1rem;
+        @media (min-width:768px) {
+            justify-content: flex-end;
+        }
+        a {
+            font-size: 1.5rem;
+            color: var(--col-light);
+        }
+    }
+    .contact_list {
+        margin-inline-start: 1.5rem;
+        span {
+            color: var(--col-blue);
+        }
+        a {
+            color: var(--col-light);
+            transition: opacity var(--transition);
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

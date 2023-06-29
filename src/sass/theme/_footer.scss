@@ -1,0 +1,49 @@
+footer {
+    background-color: var(--col-grey);
+    font-size: 0.889rem;
+    color: var(--col-dark);
+    .footer__address {
+        font-weight: var(--fw-900);
+    }
+    ul.menu {
+        list-style: none;
+        display: flex;
+        gap: 1rem;          
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    a {
+        transition: color var(--transition);
+        text-decoration: none;
+        color: var(--col-dark);
+        &:hover {
+            color: var(--col-red);
+        }
+    }
+
+
+    .footer__logo {
+        margin-bottom: 2rem;
+    }
+
+}
+.colophon {
+    background-color: var(--col-grey);
+    color: hsl(0 0% 60%);
+    font-size: var(--fs-100);
+    a {
+        color: hsl(0 0% 60%);
+        text-decoration: none;
+        transition: color var(--transition);
+        &:hover {
+            color: var(--col-red);
+        }
+    }
+    .cb {
+        content: url(../img/cb.png);
+        transition: all .2s ease-in;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

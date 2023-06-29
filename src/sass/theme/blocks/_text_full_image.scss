@@ -1,0 +1,33 @@
+.text_full_image {
+    display: grid;
+    @media (min-width:992px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    &__img {
+        min-height: max-content;
+        img {
+            object-fit: contain;
+            height: 100%;
+        }
+        &.reverse {
+            order: -1;
+        }
+    }
+    &__content {
+        padding: 2rem 3rem 3rem 3rem;
+        min-height: 500px;
+        &--wrapper {
+            height: 100%;
+            display: grid;
+            align-items: center;
+        }
+    }
+}
+
+.icon_flex {
+    gap: 1rem;
+    justify-content: center;
+    img {
+        max-width: 80px;
+    }
+}

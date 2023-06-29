@@ -1,0 +1,23 @@
+.hero {
+    margin-top: var(--h-top);
+    @media (min-width:768px) {
+        margin-top: var(--h-top-desktop);
+    }
+    // background-color: var(--col-primary-400);
+    .carousel {
+        height: calc(70vh - var(--h-top));
+        min-height: 400px;
+        overflow: hidden;
+    }
+    .carousel-inner {
+        height: 100%;
+    }
+    .carousel-item {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    .carousel-indicators {
+        margin-inline: auto;
+    }
+}
