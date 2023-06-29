@@ -6,8 +6,10 @@ if (get_field('order') == 'Image/Text') {
     $orderImage = 'reverse';
     $constrain = 'constrain-right';
 }
+
+$bg = get_field('background');
 ?>
-<section class="text_full_image">
+<section class="text_full_image" style="background-color:<?=$bg?>">
     <div class="text_full_image__content bg-grey">
         <div class="text_full_image__content--wrapper">
             <div class="<?=$constrain?> text-center">
