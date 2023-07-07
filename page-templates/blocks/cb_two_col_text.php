@@ -1,10 +1,12 @@
 <?php
 $bg = get_field('background');
+$left_align = get_field('left_alignment') == 'Left' ? 'text-start' : 'text-center';
+$right_align = get_field('right_alignment') == 'Left' ? 'text-start' : 'text-center';
 ?>
 <section class="two_col_text py-5" style="background-color:<?=$bg?>">
     <div class="container-xl">
         <div class="row">
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-6 <?=$left_align?>">
                 <h2 class="mb-4"><?=get_field('left_title')?></h2>
                 <?=get_field('left_content')?>
                 <?php
@@ -26,7 +28,7 @@ $bg = get_field('background');
                 }
                 ?>
             </div>
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-6 <?=$right_align?>">
                 <h2 class="mb-4"><?=get_field('right_title')?></h2>
                 <?=get_field('right_content')?>
                 <?php

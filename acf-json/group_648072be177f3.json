@@ -1,10 +1,10 @@
 {
     "key": "group_648072be177f3",
-    "title": "CB Hero",
+    "title": "CB Hero Slideshow",
     "fields": [
         {
             "key": "field_648072beb0f24",
-            "label": "CB Hero",
+            "label": "CB Hero Slideshow",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -89,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687954155
+    "modified": 1688651260
 }

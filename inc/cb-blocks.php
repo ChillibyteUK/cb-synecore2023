@@ -4,10 +4,19 @@ function acf_blocks()
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(array(
             'name'				=> 'cb_hero',
-            'title'				=> __('CB Hero'),
+            'title'				=> __('CB Hero Slideshow'),
             'category'			=> 'layout',
             'icon'				=> 'cover-image',
             'render_template'	=> 'page-templates/blocks/cb_hero.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_hero_single',
+            'title'				=> __('CB Hero'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_hero_single.php',
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
@@ -48,6 +57,15 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
+            'name'				=> 'cb_text_text_full_image',
+            'title'				=> __('CB Text / Text / Full Bleed Image'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_text_text_full_image.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
             'name'				=> 'cb_two_col_text',
             'title'				=> __('CB Two Col Text'),
             'category'			=> 'layout',
@@ -75,6 +93,15 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
+            'name'				=> 'cb_badge_flow',
+            'title'				=> __('CB Badge Flow'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_badge_flow.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
             'name'				=> 'cb_latest_case_studies',
             'title'				=> __('CB Latest Case Studies'),
             'category'			=> 'layout',
@@ -98,6 +125,24 @@ function acf_blocks()
             'category'			=> 'layout',
             'icon'				=> 'cover-image',
             'render_template'	=> 'page-templates/blocks/cb_contact_form.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_quote',
+            'title'				=> __('CB Quote'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_quote.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_full_bleed_image',
+            'title'				=> __('CB Full Bleed Image'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_full_bleed_image.php',
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));

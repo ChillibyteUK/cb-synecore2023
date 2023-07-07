@@ -21,3 +21,33 @@
         margin-inline: auto;
     }
 }
+
+.hero-single {
+    margin-top: var(--h-top);
+    @media (min-width:768px) {
+        margin-top: var(--h-top-desktop);
+    }
+    min-height: 400px;
+    min-height: calc(80vh - var(--h-top));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__grid {
+        display: grid;
+        @media (min-width:768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__content {
+        background-color: var(--col-blue);
+        color: white;
+        &--inner {
+            @extend .constrain-left;
+            padding: 3rem 2rem 3rem 0;
+            @media (max-width:1199px) {
+                padding-left: 1rem;
+            }
+            font-size: var(--fs-450);
+        }
+    }
+}

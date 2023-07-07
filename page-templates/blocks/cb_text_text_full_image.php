@@ -2,19 +2,14 @@
 $orderImage = '';
 $constrain = 'constrain-left';
 
-if (get_field('order') == 'Image/Text') {
-    $orderImage = 'reverse';
-    $constrain = 'constrain-right';
-}
-
 $bg = get_field('background') ?: '#fff';
 $img_bg = get_field('image_background') ?: '#fff';
 $text = get_field('content_text') ?: '#363635';
 ?>
-<section class="text_full_image" style="background-color:<?=$bg?>">
-    <div class="text_full_image__content">
-        <div class="text_full_image__content--wrapper">
-            <div class="<?=$constrain?> text-center py-5" style="color:<?=$text?>">
+<section class="text_text_full_image" style="background-color:<?=$bg?>">
+    <div class="text_text_full_image__content">
+        <div class="<?=$constrain?> text_text_full_image__content--wrapper">
+            <div class="text-center py-5" style="color:<?=$text?>">
                 <h2 class="mb-4"><?=get_field('title')?></h2>
                 <?=get_field('content')?>
                 <?php
@@ -37,8 +32,13 @@ $text = get_field('content_text') ?: '#363635';
                 ?>
             </div>
         </div>
+        <div class="text_text_full_image__content--wrapper">
+            <div class="pb-5 py-lg-5 mt-lg-5" style="color:<?=$text?>">
+                <?=get_field('centre_content')?>
+            </div>
+        </div>
     </div>
-    <div class="text_full_image__img <?=$orderImage?>" style="background-color:<?=$img_bg?>">
+    <div class="text_text_full_image__img <?=$orderImage?>" style="background-color:<?=$img_bg?>">
         <img src="<?=wp_get_attachment_image_url(get_field('image'),'full')?>">
     </div>
 </section>

@@ -111,6 +111,11 @@ function widgets_init()
                 'slug'  => 'grey',
                 'color' => '#E7E7E9',
             ),
+            array(
+                'name'  => 'White',
+                'slug'  => 'white',
+                'color' => '#FFF',
+            ),
         )
     );
 }

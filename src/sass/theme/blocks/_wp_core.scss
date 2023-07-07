@@ -65,3 +65,11 @@
 .wp-block-columns {
     gap: 1rem;
 }
+
+#main li {
+    &::marker {
+        content: "\f105\0020";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 600;
+    }
+}
