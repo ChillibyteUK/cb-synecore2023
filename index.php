@@ -3,35 +3,27 @@
 defined('ABSPATH') || exit;
 
 $page_for_posts = get_option( 'page_for_posts' );
-$bg = get_the_post_thumbnail_url($page_for_posts,'full');
-
-
+$img = get_the_post_thumbnail_url($page_for_posts,'full');
 
 get_header();
 ?>
 <main id="main">
-<!-- hero -->
-<section id="hero" class="hero d-flex align-items-center hero--default">
-    <div class="overlay"></div>
-    <div class="hero__inner container-xl">
-        <div class="row h-100">
-            <div class="col-lg-6 hero__content d-flex flex-column justify-content-center order-2 order-lg-1 py-5" data-aos="fade">
-                <h1><?=get_the_title($page_for_posts)?></h1>
-            </div>
-            <div class="col-lg-6 hero__image order-1 order-lg-2" style="background-image:url(<?=$bg?>)">
-            </div>
+<link rel="preload" as="image" href="<?=$img?>">
+<header class="hero-single <?=$class?>" style="background-image:url(<?=$img?>)">
+<div class="hero-single__grid">
+    <div class="hero-single__content bg-dark">
+        <div class="hero-single__content--inner">
+            <h1 class="mb-4"><?=get_the_title($page_for_posts)?></h1>
+            <p><?=get_the_content(null, false, $page_for_posts)?>
         </div>
     </div>
-    <div class="overlay--bottom"></div>
-</section>
-
+</div>
+</header>
     <div class="container-xl py-5">
         <?php
-        if (get_the_content(null, false, $page_for_posts)) {
-            echo '<div class="mb-5">' . get_the_content(null, false, $page_for_posts) . '</div>';
-        }
-
-        $cats = get_categories(array('exclude' => array(32)));
+        // $cats = get_categories(array('exclude' => array(32)));
+        $cats = get_categories();
+        /*
         ?>
         <div class="filters mb-4">
             <?php
@@ -39,9 +31,11 @@ get_header();
         foreach ($cats as $cat) {
             echo '<button class="btn btn-outline-primary me-2 mb-2" data-filter=".' . cbslugify($cat->name) . '">' . $cat->cat_name . '</button>';
         }
-        echo '<a href="/events/" class="btn btn-outline-primary me-2 mb-2">Events</a>';
         ?>
         </div>
+        <?php
+        */
+        ?>
         <div class="row w-100" id="grid">
             <?php
             while (have_posts()) {
@@ -64,20 +58,16 @@ get_header();
                 }
 
                 ?>
-            <div class="grid_item col-lg-4 col-md-6 p-0 <?=$catclass?>">
+            <div class="news__item col-lg-4 col-md-6 p-0 <?=$catclass?>">
                 <a href="<?=get_the_permalink(get_the_ID())?>">
-                    <div class="card card--<?=$flashcat?>">
+                    <div class="news__card card--<?=$flashcat?>">
                         <div class="news__image_container">
                             <div class="news__flash news__flash--<?=$flashcat?>"><?=$category?></div>
-                            <div class="news__image" style="background-image:url('<?=get_the_post_thumbnail_url(get_the_ID(),'large')?>')"></div>
+                            <img class="news__image" src="<?=get_the_post_thumbnail_url(get_the_ID(),'large')?>">
                         </div>
                         <div class="news__inner">
                             <h3 class="news__title mb-0"><?=get_the_title()?></h3>
                             <div class="news__date"><?=$the_date?></div>
-                            <div class="news__content">
-                                <div class="news__content__overlay"></div>
-                                <?=wp_trim_words(get_the_content(get_the_ID()),20)?>
-                            </div>
                         </div>
                         <!-- <div class="card__link">Read more</div> -->
                     </div>
@@ -89,37 +79,12 @@ get_header();
         </div>
 <!--        <div class="mt-5">
         <?php
-        numeric_posts_nav();
+        // numeric_posts_nav();
         ?>
         </div>
         -->
     </div>
 </main>
 <?php
-add_action('wp_footer',function(){
-?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-(function($){
-        
-    var $grid=$('#grid').isotope({
-        itemSelector:'.grid_item',
-        percentPosition: true,
-        layoutMode: 'fitRows',
-    });
-    
-    $('.filters').on('click','button',function(){
-        var filterValue=$(this).attr('data-filter');
-        $('.filters').find('.active').removeClass('active');
-        $(this).addClass('active');
-        $grid.isotope({filter:filterValue});
-    });
-
-
-
-})(jQuery);
-</script>
-    <?php
-},9999);
 
 get_footer();

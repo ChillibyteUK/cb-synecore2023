@@ -20,7 +20,7 @@ $img = get_the_post_thumbnail_url(get_the_ID(),'full');
     </section>
     <div class="container-xl">
         <div class="row g-4 pb-4">
-            <div class="col-lg-9 order-2">
+            <div class="col-lg-9 order-2 blog__content">
                 <h1 class="blog__title"><?=get_the_title()?></h1>
                 <img src="<?=$img?>" alt="" class="blog__image">
             <?php
@@ -63,14 +63,15 @@ $img = get_the_post_thumbnail_url(get_the_ID(),'full');
             </div>
         </div>
         <section class="related pb-5">
-            <h3><span>Related</span> Guides</h3>
+            <h3><span>Related</span> News</h3>
             <div class="row g-4">
             <?php
             $cats = get_the_category();
             $ids = wp_list_pluck($cats,'term_id');
             $r = new WP_Query(array(
                 'category__in' => $ids,
-                'posts_per_page' => 4
+                'posts_per_page' => 4,
+                'post__not_in' => array(get_the_ID())
             ));
             while ($r->have_posts()) {
                 $r->the_post();
@@ -89,21 +90,6 @@ $img = get_the_post_thumbnail_url(get_the_ID(),'full');
             </div>
         </section>
     </div>
-<section class="cta_block cta_block--light py-5">
-    <div class="container-xl">
-        <h2 class="cta__title">Get A <span>Cash Offer</span> For Your Property</h2>
-        <div class="cta__intro mb-4"><?=get_field('cta_intro')?></div>
-        <div class="form-container">
-            <div class="form-inner d-flex flex-wrap gap-4 justify-content-center">
-                <div class="text-center">Get a <span>Free Cash Offer</span> today</div>
-                <div class="d-sm-flex w-100 w-sm-auto">
-                    <input type="text" class="form-control mb-3 mb-sm-0 me-2" placeholder="Enter your Post Code">
-                    <button class="d-block w-100 w-sm-auto d-sm-inline btn btn--accent">Get Offer</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 </main>
 <?php
 get_footer();

@@ -12,8 +12,8 @@
   --col-blue: hsl(var(--hsl-col-blue));
   --col-red: hsl(var(--hsl-col-red));
   --col-red-200: hsl(var(--hsl-col-red-200));
-  --h-top: 70px;
-  --h-top-desktop: 70px;
+  --h-top: 90px;
+  --h-top-desktop: 90px;
   --fw-400: 300;
   --fw-900: 700;
   --fs-100: clamp(0.72rem, calc(0.80rem + -0.11vw), 0.78rem);

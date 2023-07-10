@@ -39,7 +39,9 @@ function cb_register_post_types() {
 add_action( 'init', 'cb_register_post_types' );
 
 
-// ************* Remove default Posts type since no blog *************
+/*
+
+// ************* Remove default Posts type if no blog *************
 
 // Remove side menu
 add_action( 'admin_menu', 'remove_default_post_type' );
@@ -63,6 +65,8 @@ function remove_draft_widget(){
 }
 
 // End remove post type
+
+*/
 
 // add_action( 'after_switch_theme', 'cb_rewrite_flush' );
 // function cb_rewrite_flush() {
