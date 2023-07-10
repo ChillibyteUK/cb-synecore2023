@@ -22487,7 +22487,7 @@ strong, b {
 }
 
 .balanced {
-  display: inline-block;
+  display: block;
   text-wrap: balance;
 }
 
@@ -23353,7 +23353,7 @@ footer .footer__logo {
   gap: 1rem;
 }
 
-#main ul li::marker {
+#main ul:not(.contact_list) li::marker {
   content: "\f105  ";
   font-family: "Font Awesome 6 Free";
   font-weight: 600;
