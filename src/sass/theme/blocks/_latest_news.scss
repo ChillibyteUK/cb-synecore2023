@@ -23,4 +23,9 @@
             transform: translateX(0.5rem);
         }
     }
+    img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: center;
+    }
 }

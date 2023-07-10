@@ -22919,6 +22919,7 @@ footer .footer__logo {
 .text_nav__nav-item img {
   aspect-ratio: 1;
   width: 80px;
+  transition: transform var(--transition);
 }
 .text_nav__nav-item p {
   align-self: center;
@@ -22939,8 +22940,18 @@ footer .footer__logo {
   filter: blur(0px) !important;
   opacity: 1 !important;
 }
+.text_nav__nav-item:hover img {
+  transform: rotate(360deg);
+}
 .text_nav__nav-item:hover p {
   background-size: 100% 5px, auto;
+}
+
+.icon_flex a {
+  transition: transform var(--transition);
+}
+.icon_flex a:hover {
+  transform: rotate(360deg);
 }
 
 .three_nav {
@@ -23190,6 +23201,13 @@ footer .footer__logo {
 }
 .news_latest a:hover::after {
   transform: translateX(0.5rem);
+}
+.news_latest img {
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .contact_form .social_icons {

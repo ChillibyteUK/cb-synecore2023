@@ -1,0 +1,8 @@
+.icon_flex {
+    a {
+        transition: transform var(--transition);
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+}

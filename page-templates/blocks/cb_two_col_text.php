@@ -20,9 +20,15 @@ $right_align = get_field('right_alignment') == 'Left' ? 'text-start' : 'text-cen
                     echo '<div class="d-flex mt-4 icon_flex">';
                     while(have_rows('left_icons')) {
                         the_row();
+                        if (get_sub_field('link')) {
+                            echo '<a href="' . get_the_permalink(get_sub_field('link')) . '">';
+                        }
                         ?>
                         <img src="<?=wp_get_attachment_image_url(get_sub_field('icon'))?>" alt="">
                         <?php
+                        if (get_sub_field('link')) {
+                            echo '</a>';
+                        }
                     }
                     echo '</div>';
                 }
@@ -42,9 +48,15 @@ $right_align = get_field('right_alignment') == 'Left' ? 'text-start' : 'text-cen
                     echo '<div class="d-flex icon_flex">';
                     while(have_rows('right_icons')) {
                         the_row();
+                        if (get_sub_field('link')) {
+                            echo '<a href="' . get_the_permalink(get_sub_field('link')) . '">';
+                        }
                         ?>
                         <img src="<?=wp_get_attachment_image_url(get_sub_field('icon'))?>" alt="">
                         <?php
+                        if (get_sub_field('link')) {
+                            echo '</a>';
+                        }
                     }
                     echo '</div>';
                 }

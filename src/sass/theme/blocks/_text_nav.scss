@@ -16,6 +16,7 @@
         img {
             aspect-ratio: 1;
             width: 80px;
+            transition: transform var(--transition);
         }
         p {
             align-self: center;
@@ -31,6 +32,9 @@
             width: max-content;
         }
         &:hover {
+            img {
+                transform: rotate(360deg);
+            }
             filter: blur(0px) !important;
             opacity: 1 !important;
             p {

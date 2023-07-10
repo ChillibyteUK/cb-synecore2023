@@ -5,7 +5,7 @@
             while(have_rows('nav')) {
                 the_row();
                 ?>
-            <a href="<?=get_the_permalink(get_field('page'))?>">
+            <a href="<?=get_the_permalink(get_sub_field('page'))?>">
                 <img src="<?=wp_get_attachment_image_url(get_sub_field('icon'),'full')?>" alt="">
                 <p><?=get_sub_field('title')?></p>
             </a>
