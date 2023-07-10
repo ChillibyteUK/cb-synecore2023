@@ -5,7 +5,7 @@ $right_align = get_field('right_alignment') == 'Left' ? 'text-start' : 'text-cen
 ?>
 <section class="two_col_text py-5" style="background-color:<?=$bg?>">
     <div class="container-xl">
-        <div class="row">
+        <div class="row g-5">
             <div class="col-lg-6 <?=$left_align?>">
                 <h2 class="mb-4"><?=get_field('left_title')?></h2>
                 <?=get_field('left_content')?>

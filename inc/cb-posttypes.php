@@ -3,12 +3,12 @@
 function cb_register_post_types() {
 
     $labels = [
-        "name" => __( "Case Studies", "cb-synecore2023" ),
-        "singular_name" => __( "Case Study", "cb-synecore2023" ),
+        "name" => __( "Projects", "cb-synecore2023" ),
+        "singular_name" => __( "Project", "cb-synecore2023" ),
     ];
 
     $args = [
-        "label" => __( "Case Studies", "cb-synecore2023" ),
+        "label" => __( "Projects", "cb-synecore2023" ),
         "labels" => $labels,
         "description" => "",
         "public" => true,
@@ -17,7 +17,7 @@ function cb_register_post_types() {
         "show_in_rest" => true,
         "rest_base" => "",
         "rest_controller_class" => "WP_REST_Posts_Controller",
-        "has_archive" => true,
+        "has_archive" => false,
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
         "menu_icon" => "dashicons-open-folder",
@@ -26,14 +26,14 @@ function cb_register_post_types() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => [ "slug" => "case-studies", "with_front" => false ],
+        "rewrite" => [ "slug" => "projects", "with_front" => false ],
         "query_var" => true,
         "supports" => [ "title",  "thumbnail", "editor" ],
         "show_in_graphql" => false,
         "exclude_from_search" => true
     ];
 
-    register_post_type( "case-studies", $args );
+    register_post_type( "projects", $args );
 
 }
 add_action( 'init', 'cb_register_post_types' );
