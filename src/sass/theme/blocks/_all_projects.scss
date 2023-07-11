@@ -6,11 +6,27 @@
     }
     &__card {
         text-decoration: none;
+        background-color: var(--col-dark);
         img {
             margin-bottom: 0.5rem;
         }
         h2 {
             font-size: var(--fs-450);
+            color: var(--col-light);
+            padding: 1rem;
+            text-align: center;
+            background-image: linear-gradient(var(--col-red), var(--col-red)), linear-gradient(transparent, transparent);
+            background-size: 0 5px, auto;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            transition: all var(--transition);
+            width: max-content;
+            margin-inline: auto;
+        }
+        &:hover {
+            h2 {
+                background-size: 100% 5px, auto;
+            }
         }
     }   
 }
