@@ -12,6 +12,6 @@
                 <div class="social_icons"><?=do_shortcode('[social_icons]')?></div>
             </div>
         </div>
-        FORM HERE ONCE PLATFORM IS DETERMINED
+        <?=do_shortcode('[gravityform id="' . get_field('contact_form_id','options') . '" title="false"]')?>
     </div>
 </section>

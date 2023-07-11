@@ -22841,6 +22841,10 @@ footer .footer__logo {
   justify-content: space-around;
 }
 
+.ginput_container_consent {
+  padding-left: 15px;
+}
+
 .hero {
   margin-top: var(--h-top);
 }
