@@ -22,7 +22,7 @@ $q = wp_get_recent_posts(array(
             </div>
         </div>
         <div class="text-center text-md-start">
-            <a href="/blog/" class="btn btn-secondary">View all news</a>
+            <a href="/blog/" class="btn btn-secondary">All News</a>
         </div>
     </div>
 </section>
