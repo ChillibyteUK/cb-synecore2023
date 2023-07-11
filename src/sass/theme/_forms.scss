@@ -15,9 +15,9 @@
 }
 
 .gfield {
-    margin-bottom: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-bottom: 15px !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
 }
 
 .gform_wrapper.gravity-theme input[type=text],
@@ -76,7 +76,7 @@
 
 body .gform_wrapper .gform_footer button {
     @extend .btn;
-    @extend .btn-primary;
+    @extend .btn-outline;
 }
 
 .gfield_checkbox,
@@ -85,6 +85,12 @@ body .gform_wrapper .gform_footer button {
     justify-content: space-around;
 }
 
-.ginput_container_consent {
-    padding-left: 15px;
+// .ginput_container_consent {
+//     padding-left: 15px;
+// }
+.gfield_consent_label a {
+    color: var(--col-blue);
+    &:hover {
+        color: var(--col-light);
+    }
 }

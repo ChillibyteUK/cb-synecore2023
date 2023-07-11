@@ -3316,31 +3316,31 @@ body .gform_wrapper .gform_footer .input-group-sm > button,
   opacity: 0.65;
 }
 
-.btn-primary, body .gform_wrapper .gform_footer button {
+.btn-primary {
   color: #fff;
   background-color: #363635;
   border-color: #363635;
 }
-.btn-primary:hover, body .gform_wrapper .gform_footer button:hover {
+.btn-primary:hover {
   color: #fff;
   background-color: #2e2e2d;
   border-color: #2b2b2a;
 }
-.btn-check:focus + .btn-primary, body .gform_wrapper .gform_footer .btn-check:focus + button, .btn-primary:focus, body .gform_wrapper .gform_footer button:focus {
+.btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
   background-color: #2e2e2d;
   border-color: #2b2b2a;
   box-shadow: 0 0 0 0.25rem rgba(84, 84, 83, 0.5);
 }
-.btn-check:checked + .btn-primary, body .gform_wrapper .gform_footer .btn-check:checked + button, .btn-check:active + .btn-primary, body .gform_wrapper .gform_footer .btn-check:active + button, .btn-primary:active, body .gform_wrapper .gform_footer button:active, .btn-primary.active, body .gform_wrapper .gform_footer button.active, .show > .btn-primary.dropdown-toggle, body .gform_wrapper .gform_footer .show > button.dropdown-toggle {
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #2b2b2a;
   border-color: #292928;
 }
-.btn-check:checked + .btn-primary:focus, body .gform_wrapper .gform_footer .btn-check:checked + button:focus, .btn-check:active + .btn-primary:focus, body .gform_wrapper .gform_footer .btn-check:active + button:focus, .btn-primary:active:focus, body .gform_wrapper .gform_footer button:active:focus, .btn-primary.active:focus, body .gform_wrapper .gform_footer button.active:focus, .show > .btn-primary.dropdown-toggle:focus, body .gform_wrapper .gform_footer .show > button.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(84, 84, 83, 0.5);
 }
-.btn-primary:disabled, body .gform_wrapper .gform_footer button:disabled, .btn-primary.disabled, body .gform_wrapper .gform_footer button.disabled {
+.btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
   background-color: #363635;
   border-color: #363635;
@@ -22616,12 +22616,12 @@ footer .footer__logo {
   min-width: 300px;
 }
 
-.btn-outline {
+.btn-outline, body .gform_wrapper .gform_footer button {
   border: 2px solid var(--col-blue);
   transition: background-color var(--transition);
   color: var(--col-light);
 }
-.btn-outline:hover {
+.btn-outline:hover, body .gform_wrapper .gform_footer button:hover {
   background-color: var(--col-blue);
   color: var(--col-light);
 }
@@ -22802,9 +22802,9 @@ footer .footer__logo {
 }
 
 .gfield {
-  margin-bottom: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
+  margin-bottom: 15px !important;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
 }
 
 .gfield textarea {
@@ -22841,8 +22841,11 @@ footer .footer__logo {
   justify-content: space-around;
 }
 
-.ginput_container_consent {
-  padding-left: 15px;
+.gfield_consent_label a {
+  color: var(--col-blue);
+}
+.gfield_consent_label a:hover {
+  color: var(--col-light);
 }
 
 .hero {
