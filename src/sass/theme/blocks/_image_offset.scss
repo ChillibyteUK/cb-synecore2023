@@ -51,7 +51,10 @@
             grid-area: textleft;
             background-color: var(--col-light);
             color: var(--col-dark);
-            padding: 2rem 3rem 3rem 3rem;
+            padding: 2rem 1rem 3rem 1rem;
+            @media (min-width:992px) {
+                padding: 2rem 3rem 3rem 3rem;
+            }
             &--inner {
                 @extend .constrain-left;
             }
@@ -60,7 +63,10 @@
             grid-area: textright;
             background-color: var(--col-dark);
             color: var(--col-light);
-            padding: 2rem 3rem 3rem 3rem;
+            padding: 2rem 1rem 3rem 1rem;
+            @media (min-width:992px) {
+                padding: 2rem 3rem 3rem 3rem;
+            }
             &--inner {
                 @extend .constrain-right;
             }

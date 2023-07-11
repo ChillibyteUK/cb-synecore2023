@@ -8,7 +8,11 @@
     }
     &__nav-item {
         display: grid;
-        grid-template-columns: 100px auto;
+        place-content: center;
+        @media (min-width:992px) {
+            place-content: start;
+            grid-template-columns: 100px auto;
+        }
         gap: 1rem;
         width: 100%;
         padding-bottom: 1rem;
@@ -17,6 +21,7 @@
             aspect-ratio: 1;
             width: 80px;
             transition: transform var(--transition);
+            margin-inline: auto;
         }
         p {
             align-self: center;

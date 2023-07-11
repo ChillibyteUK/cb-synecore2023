@@ -1,5 +1,5 @@
 .news_latest {
-    a {
+    .row a {
         display: block;
         padding-right: 1.5rem;
         font-size: var(--fs-450);
@@ -24,7 +24,7 @@
         }
     }
     img {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 2 / 1;
         object-fit: cover;
         object-position: center;
     }

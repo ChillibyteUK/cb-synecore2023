@@ -2,7 +2,9 @@
     &__grid {
         display: grid;
         gap: 3rem;
-        grid-template-columns: 1fr 1fr;
+        @media (min-width:992px) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
     &__card {
         text-decoration: none;
