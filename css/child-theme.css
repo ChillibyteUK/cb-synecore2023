@@ -22503,6 +22503,10 @@ strong, b {
   background-color: var(--col-blue);
 }
 
+.text-blue {
+  color: var(--col-blue);
+}
+
 .bg-dark {
   background-color: var(--col-dark);
 }
@@ -23390,6 +23394,63 @@ footer .footer__logo {
 }
 .all_services__nav-item:hover p {
   background-size: 100% 5px, auto;
+}
+
+.team__grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 1400px) {
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.team__card {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 576px) {
+  .team__card {
+    grid-template-columns: 200px auto;
+  }
+}
+.team__image {
+  max-width: 200px;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  margin-inline: auto;
+}
+.team__info {
+  display: grid;
+  grid-template-areas: "name linkedin" "role linkedin";
+  grid-template-columns: auto 50px;
+  -moz-column-gap: 0.5rem;
+  column-gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--col-red);
+}
+.team__name {
+  grid-area: name;
+  font-size: var(--fs-450);
+  font-weight: var(--fw-900);
+}
+.team__role {
+  grid-area: role;
+  font-style: italic;
+  font-size: var(--fs-200);
+}
+.team__linkedin {
+  grid-area: linkedin;
+  align-self: center;
+  justify-self: center;
+  font-size: var(--fs-450);
+}
+.team__bio {
+  font-size: var(--fs-200);
 }
 
 .wp-block-quote--cb {
