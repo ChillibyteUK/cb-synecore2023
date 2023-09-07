@@ -1,6 +1,6 @@
 .hero {
     margin-top: var(--h-top);
-    @media (min-width:768px) {
+    @media (min-width:992px) {
         margin-top: var(--h-top-desktop);
     }
     // background-color: var(--col-primary-400);
@@ -24,7 +24,7 @@
 
 .hero-single {
     margin-top: var(--h-top);
-    @media (min-width:768px) {
+    @media (min-width:992px) {
         margin-top: var(--h-top-desktop);
     }
     min-height: 400px;

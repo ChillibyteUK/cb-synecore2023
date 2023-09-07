@@ -82,7 +82,7 @@ add_shortcode('social_in_icon', function () {
     $social = get_field('social', 'options');
     $inurl = $social['linkedin_url'];
     if ($inurl != '') {
-        return '<a href="' . $inurl . '" target="_blank"><i class="fab fa-linkedin"></i></a>';
+        return '<a href="' . $inurl . '" target="_blank"><i class="fab fa-linkedin-in"></i></a>';
     }
     return;
 });

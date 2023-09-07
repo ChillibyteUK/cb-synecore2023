@@ -12,7 +12,7 @@
   --col-blue: hsl(var(--hsl-col-blue));
   --col-red: hsl(var(--hsl-col-red));
   --col-red-200: hsl(var(--hsl-col-red-200));
-  --h-top: 90px;
+  --h-top: 64px;
   --h-top-desktop: 90px;
   --fw-400: 300;
   --fw-900: 700;
