@@ -240,6 +240,16 @@ function cb_theme_enqueue()
 add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
 
 
+/* append button to primary nav */
+add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+function add_admin_link($items, $args)
+{
+    if ($args->theme_location == 'primary_nav') {
+        $items .= '<li><a class="btn-nav-cta" title="Get a Quote" href="/contact/">Get a Quote</a></li>';
+    }
+    return $items;
+}
+
 // black thumbnails - fix alpha channel
 /**
  * Patch to prevent black PDF backgrounds.

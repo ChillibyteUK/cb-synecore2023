@@ -22667,6 +22667,25 @@ footer .footer__logo {
   color: var(--col-red);
 }
 
+#navbarr a.btn-nav-cta {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: var(--fw-900);
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  border-radius: 0;
+  background-color: var(--col-red);
+  background-image: none;
+  color: var(--col-light);
+  border: 2px solid var(--col-red);
+  transition: background-color var(--transition), color var(--transition);
+}
+#navbarr a.btn-nav-cta:hover {
+  background-color: var(--col-light);
+  color: var(--col-red);
+}
+
 .news__item a {
   text-decoration: none;
   color: initial;
