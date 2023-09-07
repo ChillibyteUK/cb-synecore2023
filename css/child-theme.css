@@ -22656,6 +22656,17 @@ footer .footer__logo {
   color: var(--col-blue);
 }
 
+.btn-red {
+  background-color: var(--col-red);
+  color: var(--col-light);
+  border: 2px solid var(--col-red);
+  transition: background-color var(--transition), color var(--transition);
+}
+.btn-red:hover {
+  background-color: var(--col-light);
+  color: var(--col-red);
+}
+
 .news__item a {
   text-decoration: none;
   color: initial;
