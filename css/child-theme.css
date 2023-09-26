@@ -23062,10 +23062,10 @@ footer .footer__logo {
   transform: rotate(360deg);
 }
 
-.icon_flex a {
+.icon_flex a img {
   transition: transform var(--transition);
 }
-.icon_flex a:hover {
+.icon_flex a:hover img {
   transform: rotate(360deg);
 }
 
