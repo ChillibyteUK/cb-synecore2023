@@ -23058,8 +23058,21 @@ footer .footer__logo {
 .icon_nav a img {
   margin-bottom: 0.5rem;
 }
+.icon_nav a .h5 {
+  background-image: linear-gradient(var(--col-red), var(--col-red)), linear-gradient(transparent, transparent);
+  background-size: 0 5px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all var(--transition);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
 .icon_nav a:hover img {
   transform: rotate(360deg);
+}
+.icon_nav a:hover .h5 {
+  background-size: 100% 5px, auto;
 }
 
 .icon_flex a img {
