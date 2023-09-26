@@ -21,6 +21,14 @@
                 <img src="<?=get_stylesheet_directory_uri()?>/img/icon__heat-pump.png" alt="">
                 <p>Heat Pumps</p>    
             </a>
+            <a class="all_services__nav-item" href="/services/mep/">
+                <img src="<?=get_stylesheet_directory_uri()?>/img/icon__mep.png" alt="">
+                <p>MEP</p>    
+            </a>
+            <a class="all_services__nav-item" href="/services/sustainable-solutions/">
+                <img src="<?=get_stylesheet_directory_uri()?>/img/icon__sustainable.png" alt="">
+                <p>Sustainable Solutions</p>
+            </a>
         </div>
     </div>
 </section>

@@ -78,6 +78,22 @@
             "new_lines": "wpautop"
         },
         {
+            "key": "field_6512a2b4f3e06",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_649c2b9f47faa",
             "label": "Nav",
             "name": "",
@@ -186,5 +202,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1687958254
+    "modified": 1695720124
 }

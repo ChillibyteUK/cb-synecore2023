@@ -11,7 +11,7 @@
         place-content: center;
         @media (min-width:992px) {
             place-content: start;
-            grid-template-columns: 100px auto;
+            grid-template-columns: 80px auto;
         }
         gap: 1rem;
         width: 100%;
@@ -19,14 +19,14 @@
         transition: opacity var(--transition), filter var(--transition);
         img {
             aspect-ratio: 1;
-            width: 80px;
+            width: 60px;
             transition: transform var(--transition);
             margin-inline: auto;
         }
         p {
             align-self: center;
             margin-bottom: 0;
-            font-size: var(--fs-600);
+            font-size: var(--fs-500);
             font-weight: var(--fw-900);
             color: var(--col-dark);
             background-image: linear-gradient(var(--col-red), var(--col-red)), linear-gradient(transparent, transparent);
