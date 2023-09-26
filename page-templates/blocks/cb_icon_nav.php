@@ -1,4 +1,7 @@
-<section class="icon_nav">
+<?php
+$class = $block['className'] ?? null ?: '';
+?>
+<section class="icon_nav <?=$class?>">
     <div class="container-xl">
         <?php
         if (get_field('icons')) {
