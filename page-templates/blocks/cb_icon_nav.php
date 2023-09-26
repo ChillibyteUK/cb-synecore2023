@@ -10,6 +10,7 @@
                 }
                 ?>
                 <img src="<?=wp_get_attachment_image_url(get_sub_field('icon'))?>" alt="">
+                <div class="h4"><?=get_the_title(get_sub_field('link'))?></div>
                 <?php
                 if (get_sub_field('link')) {
                     echo '</a>';
