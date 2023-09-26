@@ -23052,6 +23052,13 @@ footer .footer__logo {
   background-size: 100% 5px, auto;
 }
 
+.icon_nav a img {
+  margin-bottom: 0.5rem;
+}
+.icon_nav a:hover img {
+  transform: rotate(360deg);
+}
+
 .icon_flex a {
   transition: transform var(--transition);
 }

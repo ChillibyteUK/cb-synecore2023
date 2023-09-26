@@ -1,0 +1,12 @@
+.icon_nav {
+    a {
+        img {
+            margin-bottom: 0.5rem;
+        }
+        &:hover {
+            img {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
