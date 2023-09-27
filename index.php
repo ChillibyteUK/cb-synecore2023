@@ -77,12 +77,9 @@ get_header();
             }
             ?>
         </div>
-<!--        <div class="mt-5">
-        <?php
-        // numeric_posts_nav();
-        ?>
-        </div>
-        -->
+        <div class="mt-5"><?php
+        numeric_posts_nav();
+        ?></div>
     </div>
 </main>
 <?php
