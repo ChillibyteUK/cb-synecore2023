@@ -10,8 +10,9 @@ if (get_field('order') == 'Image/Text') {
 $bg = get_field('background') ?: '#fff';
 $img_bg = get_field('image_background') ?: '#fff';
 $text = get_field('content_text') ?: '#363635';
+$class = $block['className'] ?? null ?: '';
 ?>
-<section class="text_full_image" style="background-color:<?=$bg?>">
+<section class="text_full_image <?=$class?>" style="background-color:<?=$bg?>">
     <div class="text_full_image__content">
         <div class="text_full_image__content--wrapper">
             <div class="<?=$constrain?> text-center py-5" style="color:<?=$text?>">
