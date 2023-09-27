@@ -23692,7 +23692,7 @@ a.anchor {
 }
 
 .table-group-divider {
-  border-top-color: var(--col-blue);
+  border-top-color: var(--col-blue) !important;
 }
 
 .share-icons {

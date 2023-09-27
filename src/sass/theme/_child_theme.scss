@@ -59,7 +59,7 @@ a.anchor {
 }
 
 .table-group-divider {
-    border-top-color: var(--col-blue);
+    border-top-color: var(--col-blue) !important;
 }
 
 // @media (max-width:768px) {
