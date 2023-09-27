@@ -22649,13 +22649,13 @@ footer .footer__logo {
 }
 
 .btn-outline--dark {
-  border: 2px solid var(--col-light);
+  border: 2px solid var(--col-dark);
   transition: background-color var(--transition);
-  color: var(--col-light);
+  color: var(--col-dark);
 }
 .btn-outline--dark:hover {
-  background-color: var(--col-light);
-  color: var(--col-dark);
+  background-color: var(--col-dark);
+  color: var(--col-light);
 }
 
 .btn-dark {
