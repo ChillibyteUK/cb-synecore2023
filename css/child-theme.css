@@ -22720,8 +22720,8 @@ footer .footer__logo {
   color: initial;
 }
 .news__title {
-  margin-bottom: 0;
-  font-size: var(--fs-450);
+  margin-bottom: 0.5rem;
+  font-size: var(--fs-400);
 }
 .news__date {
   font-size: 0.8rem;

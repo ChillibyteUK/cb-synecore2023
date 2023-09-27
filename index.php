@@ -66,7 +66,7 @@ get_header();
                             <img class="news__image" src="<?=get_the_post_thumbnail_url(get_the_ID(),'large')?>">
                         </div>
                         <div class="news__inner">
-                            <h3 class="news__title mb-0"><?=get_the_title()?></h3>
+                            <h3 class="news__title"><?=get_the_title()?></h3>
                             <div class="news__date"><?=$the_date?></div>
                         </div>
                         <!-- <div class="card__link">Read more</div> -->
