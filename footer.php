@@ -5,7 +5,7 @@ defined('ABSPATH') || exit;
 <div id="footer-top"></div>
 <footer class="footer pt-5">
     <div class="container-xl text-center">
-        <img src="<?=get_stylesheet_directory_uri()?>/img/synecore-logo.jpg"
+        <img src="<?=get_stylesheet_directory_uri()?>/img/synecore-logo.svg"
                         class="footer__logo" alt="" width=300 height=60>
         <div class="footer__address mb-4">
             <?=do_shortcode('[contact_address]')?>
