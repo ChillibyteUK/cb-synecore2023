@@ -22648,6 +22648,16 @@ footer .footer__logo {
   color: var(--col-light);
 }
 
+.btn-outline--dark {
+  border: 2px solid var(--col-light);
+  transition: background-color var(--transition);
+  color: var(--col-light);
+}
+.btn-outline--dark:hover {
+  background-color: var(--col-light);
+  color: var(--col-dark);
+}
+
 .btn-dark {
   background-color: var(--col-dark);
   color: var(--col-light);
