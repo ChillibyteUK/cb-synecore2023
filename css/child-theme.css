@@ -22524,7 +22524,8 @@ strong, b {
 }
 #wrapper-navbar .navbar-grid {
   display: grid;
-  gap: 1rem;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
   grid-template-columns: minmax(100px, 300px) 1fr;
 }
 @media (min-width: 768px) {
@@ -22581,6 +22582,9 @@ strong, b {
   font-size: var(--fs-300);
   font-weight: var(--fw-400);
   background: none;
+}
+#wrapper-navbar .logo--icon img {
+  max-height: 50px;
 }
 
 footer {

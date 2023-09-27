@@ -108,7 +108,8 @@ wp_head();
 <div id="wrapper-navbar" class="fixed-top">
     <nav class="navbar navbar-expand-lg p-0">
         <div class="container-xl py-2 nav-top align-items-center navbar-grid">
-            <a href="/" class="logo" aria-label="Synecore Homepage"><img src="<?=get_stylesheet_directory_uri()?>/img/synecore-logo.svg"></a>
+            <a href="/" class="logo d-none d-sm-block" aria-label="Synecore Homepage"><img src="<?=get_stylesheet_directory_uri()?>/img/synecore-logo.svg"></a>
+            <a href="/" class="logo--icon d-sm-none" aria-label="Synecore Homepage"><img src="<?=get_stylesheet_directory_uri()?>/img/synecore-icon.svg"></a>
             <div class="button-container d-md-none text-end">
                 <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
