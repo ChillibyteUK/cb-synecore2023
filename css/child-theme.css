@@ -22556,6 +22556,7 @@ strong, b {
   color: var(--col-red);
   background-size: 100% 5px, auto;
 }
+#wrapper-navbar .current-menu-item a,
 #wrapper-navbar .current-page-ancestor a {
   color: var(--col-red);
   background-size: 100% 5px, auto;

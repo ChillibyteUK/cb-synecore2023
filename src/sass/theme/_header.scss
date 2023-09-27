@@ -46,11 +46,12 @@
         }
     }
 
+    .current-menu-item a,
     .current-page-ancestor a {
         color: var(--col-red);
         background-size: 100% 5px, auto;
     }
-    
+
     .dropdown-menu {
         a {
             color: var(--col-dark);
