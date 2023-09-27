@@ -58,6 +58,13 @@ a.anchor {
     }
 }
 
+.pad-top {
+    margin-top: var(--h-top);
+    @media (min-width:992px) {
+        margin-top: var(--h-top-desktop);
+    }
+}
+
 .table-group-divider {
     border-top-color: var(--col-blue) !important;
 }
