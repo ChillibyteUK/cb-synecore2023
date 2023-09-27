@@ -23691,6 +23691,10 @@ a.anchor {
   }
 }
 
+.table-group-divider {
+  border-top-color: var(--col-blue);
+}
+
 .share-icons {
   padding-top: 1rem;
 }
