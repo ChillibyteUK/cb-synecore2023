@@ -66,7 +66,7 @@
     gap: 1rem;
 }
 
-#main ul:not(.contact_list,.fa-ul) li {
+#main ul:not(.contact_list,.fa-ul,.pagination) li {
     &::marker {
         content: "\f105\0020";
         font-family: "Font Awesome 6 Free";

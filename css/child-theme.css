@@ -23638,7 +23638,7 @@ footer .footer__logo {
   gap: 1rem;
 }
 
-#main ul:not(.contact_list, .fa-ul) li::marker {
+#main ul:not(.contact_list, .fa-ul, .pagination) li::marker {
   content: "\f105  ";
   font-family: "Font Awesome 6 Free";
   font-weight: 600;
