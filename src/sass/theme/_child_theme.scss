@@ -23,6 +23,12 @@ a {
         color: var(--col-dark);
     }
 }
+.has-dark-background-color {
+    a:hover {
+        color: var(--col-light);
+    }
+}
+
 a.noline {
     text-decoration: none;
 }
