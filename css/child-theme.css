@@ -22803,7 +22803,7 @@ footer .footer__logo {
   margin-bottom: 0.5rem;
 }
 .blog_card h3, .blog_card .h3 {
-  font-size: var(--fs-450);
+  font-size: var(--fs-400);
 }
 
 .navigation {
