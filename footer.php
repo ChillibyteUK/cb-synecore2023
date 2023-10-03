@@ -8,7 +8,7 @@ defined('ABSPATH') || exit;
         <img src="<?=get_stylesheet_directory_uri()?>/img/synecore-logo.svg"
                         class="footer__logo" alt="" width=300 height=60>
         <div class="footer__address mb-4">
-            <?=do_shortcode('[contact_address]')?>
+            <?=strip_tags(do_shortcode('[contact_address]'))?>
             |
             <?=do_shortcode('[contact_phone]')?>
             |
