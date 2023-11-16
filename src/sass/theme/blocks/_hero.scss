@@ -24,8 +24,13 @@
 
 .hero-single {
     margin-top: var(--h-top);
-    @media (min-width:992px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 300px;
+    @media (min-width:768px) {
+        padding-top: 0;
         margin-top: var(--h-top-desktop);
+        flex-direction: column;
     }
     min-height: calc(80vh - var(--h-top));
     &.hero-single--short {

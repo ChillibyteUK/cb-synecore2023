@@ -22988,14 +22988,19 @@ footer .footer__logo {
 
 .hero-single {
   margin-top: var(--h-top);
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 300px;
   min-height: calc(80vh - var(--h-top));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .hero-single {
+    padding-top: 0;
     margin-top: var(--h-top-desktop);
+    flex-direction: column;
   }
 }
 .hero-single.hero-single--short {
