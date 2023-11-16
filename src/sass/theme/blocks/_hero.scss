@@ -27,8 +27,10 @@
     @media (min-width:992px) {
         margin-top: var(--h-top-desktop);
     }
-    min-height: 400px;
     min-height: calc(80vh - var(--h-top));
+    &.hero-single--short {
+        min-height: 400px;
+    }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
