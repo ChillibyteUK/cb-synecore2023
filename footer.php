@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
 </footer>
 <div class="colophon pt-1">
     <div class="container-xl pb-2 text-center">
-        <div class="mb-4"><?=get_field('colophon','options')?></div>
+        <div class="mb-4"><a href="/wp-content/uploads/2023/11/Synecore-Terms-and-Conditions-2020.pdf">Terms &amp; Conditions</a></div>
         <div class="mb-4">&copy; <?=date('Y')?> Synecore Ltd. Registered in England, no. 05420500</div>
         <a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
                     title="Digital Marketing by Chillibyte"></a>
