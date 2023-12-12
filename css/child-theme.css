@@ -22530,7 +22530,7 @@ strong, b {
 }
 @media (min-width: 768px) {
   #wrapper-navbar .navbar-grid {
-    grid-template-columns: 1fr 2fr 100px;
+    grid-template-columns: 1fr 2fr;
   }
 }
 #wrapper-navbar .nav-item.current-menu-parent > a {

@@ -106,20 +106,20 @@ wp_head();
     <?php understrap_body_attributes(); ?>>
     <?php do_action('wp_body_open'); ?>
 <div id="wrapper-navbar" class="fixed-top">
-    <nav class="navbar navbar-expand-lg p-0">
+    <nav id="navbar" class="navbar navbar-expand-md d-block p-0 pt-2 pt-md-0" aria-labelledby="main-nav-label">
         <div class="container-xl py-2 nav-top align-items-center navbar-grid">
             <a href="/" class="logo d-none d-sm-block" aria-label="Synecore Homepage"><img src="<?=get_stylesheet_directory_uri()?>/img/synecore-logo.svg"></a>
             <a href="/" class="logo--icon d-sm-none" aria-label="Synecore Homepage"><img src="<?=get_stylesheet_directory_uri()?>/img/synecore-icon.svg"></a>
             <div class="button-container d-md-none text-end">
                 <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                        data-bs-target=".navbars" aria-controls="navbar" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                 </button>
             </div>
             <div class="d-flex flex-column-reverse flex-md-column">
                 <div id="topNav" class="d-none d-md-flex px-2 px-md-0 collapse navbar-collapse navbars">
-                    <ul id="top-nav" class="navbar-nav w-100 justify-content-end align-items-md-center mt-2 mt-md-0 d-flex flex-row">
+                    <ul id="top-nav" class="navbar-nav w-100 justify-content-end align-items-md-center mt-2 mt-md-0">
                         <li class="menu-item nav-item">
                             <a title="Phone" href="tel:<?=parse_phone(get_field('contact_phone','options'))?>" class="nav-link"><?=get_field('contact_phone','options')?></a>
                         </li>
@@ -129,50 +129,22 @@ wp_head();
                         <li class="nav-item"><?=do_shortcode('[social_in_icon]')?></li>
                     </ul>
                 </div>
-                <div class="collapse navbar-collapse" id="navbar">
-                        <?php
-                        wp_nav_menu(
-        array(
-            'theme_location'  => 'primary_nav',
-            'container_class' => 'w-100',
-            'menu_class'      => 'navbar-nav justify-content-between',
-            'fallback_cb'     => '',
-            'menu_id'         => 'navbarr',
-            'depth'           => 3,
-            'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-        )
-    );
-    ?>
-                </div>
-            </div>
-            <div class="sidenav-container d-none d-md-block">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#sidenav" aria-controls="sidenav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <i class="fas fa-bars"></i>
-                </button>
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location'  => 'primary_nav',
+                            'container_class' => 'pt-2 px-0 p-md-0 collapse navbar-collapse navbars',
+                            'container_id'    => 'primaryNav',
+                            'menu_class'      => 'navbar-nav justify-content-between w-100',
+                            'fallback_cb'     => '',
+                            'menu_id'         => 'navbarr',
+                            'depth'           => 2,
+                            'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+                        )
+                    );
+                ?>
             </div>
         </div>
+    
     </nav>
-</div>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="sidenav" aria-labelledby="sidenavLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="sidenavLabel"></h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <?php
-        wp_nav_menu(
-            array(
-                'theme_location'  => 'sidebar_nav',
-                'container_class' => 'w-100',
-                'menu_class'      => 'navbar-nav justify-content-around',
-                'fallback_cb'     => '',
-                'menu_id'         => 'navbarr',
-                'depth'           => 3,
-                'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-            )
-        );
-        ?>
-    </div>
 </div>
