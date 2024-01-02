@@ -11,7 +11,13 @@
                     <div class="team__info">
                         <div class="team__name"><?=get_sub_field('name')?></div>
                         <div class="team__role"><?=get_sub_field('title')?></div>
+                        <?php
+                        if (get_sub_field('linkedin_url') != null) {
+                            ?>
                         <div class="team__linkedin"><a href="<?=get_sub_field('linkedin_url')?>" target="_blank"><i class="fa-brands fa-linkedin-in text-blue"></i></a></div>
+                            <?php
+                        }
+                        ?>
                     </div>
                     <div class="team__bio"><?=get_sub_field('bio')?></div>
                 </div>

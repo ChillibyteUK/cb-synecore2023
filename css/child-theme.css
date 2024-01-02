@@ -23525,18 +23525,13 @@ footer .footer__logo {
   display: grid;
   gap: 1rem;
 }
-@media (min-width: 1400px) {
-  .team__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 .team__card {
   display: grid;
   gap: 1rem;
 }
 @media (min-width: 576px) {
   .team__card {
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 200px auto;
   }
 }
 .team__image {
