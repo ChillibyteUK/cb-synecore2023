@@ -22745,6 +22745,7 @@ footer .footer__logo {
   background-color: var(--col-blue);
 }
 .news__image {
+  width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
   object-fit: cover;
@@ -22775,7 +22776,7 @@ footer .footer__logo {
 .blog .sidebar {
   position: -webkit-sticky;
   position: sticky;
-  top: var(--h-top);
+  top: calc(var(--h-top) + 2rem);
   background-color: var(--col-red);
   color: white;
   font-size: var(--fs-200);

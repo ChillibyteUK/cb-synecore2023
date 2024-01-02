@@ -29,6 +29,7 @@
         }
     }
     &__image {
+        width: 100%;
         aspect-ratio: 16 / 9;
         object-fit: cover;
         object-position: center;
@@ -61,7 +62,7 @@
 
     .sidebar {
         position: sticky;
-        top: var(--h-top);
+        top: calc(var(--h-top) + 2rem);
         background-color: var(--col-red);
         color: white;
         font-size: var(--fs-200);
