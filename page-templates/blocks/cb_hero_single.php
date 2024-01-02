@@ -5,6 +5,9 @@ $colour = get_field('theme') == 'Dark' ? 'bg-dark' : '';
 ?>
 <link rel="preload" as="image" href="<?=$img?>">
 <header class="hero-single <?=$class?>" style="background-image:url(<?=$img?>)">
+<?php
+if (get_field('title') != null) {
+    ?>
 <div class="hero-single__grid">
     <div class="hero-single__content <?=$colour?>">
         <div class="hero-single__content--inner">
@@ -13,4 +16,7 @@ $colour = get_field('theme') == 'Dark' ? 'bg-dark' : '';
         </div>
     </div>
 </div>
+    <?php
+}
+?>
 </header>
