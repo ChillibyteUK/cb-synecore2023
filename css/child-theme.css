@@ -23446,6 +23446,11 @@ footer .footer__logo {
   background-color: var(--col-dark);
 }
 .all_projects__card img {
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
   margin-bottom: 0.5rem;
 }
 .all_projects__card h2, .all_projects__card .h2 {
