@@ -22417,7 +22417,7 @@ readers do not read off random characters that represent icons */
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
@@ -22544,10 +22544,6 @@ strong, b {
   text-decoration: none;
   font-size: 1rem;
   font-weight: var(--fw-900);
-  background-image: linear-gradient(var(--col-red), var(--col-red)), linear-gradient(transparent, transparent);
-  background-size: 0 5px, auto;
-  background-repeat: no-repeat;
-  background-position: center bottom;
   transition: all var(--transition);
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -22555,7 +22551,6 @@ strong, b {
 }
 #wrapper-navbar .navbar-collapse a:hover {
   color: var(--col-red);
-  background-size: 100% 5px, auto;
 }
 #wrapper-navbar .current-menu-item a,
 #wrapper-navbar .current-page-ancestor a {
