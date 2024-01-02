@@ -28,6 +28,9 @@ $class = $block['className'] ?? null ?: '';
         ?>
     </ol>
     </div>
+    <?php
+if (get_field('title') != null) {
+    ?>
     <div class="hero__grid">
         <div class="hero__content bg-dark">
             <div class="hero__content--inner">
@@ -41,6 +44,9 @@ $class = $block['className'] ?? null ?: '';
                 ?>
             </div>
         </div>
+    <?php
+}
+?>
     </div>
 </header>
 
