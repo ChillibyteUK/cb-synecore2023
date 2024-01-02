@@ -23523,7 +23523,7 @@ footer .footer__logo {
 
 .team__grid {
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
 }
 .team__card {
   display: grid;
