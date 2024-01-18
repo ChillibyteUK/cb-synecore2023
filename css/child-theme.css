@@ -22424,7 +22424,7 @@ body {
   font-family: "Poppins", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: var(--fw-400);
   font-size: 1rem;
-  line-height: 1.556;
+  line-height: 1.8;
   font-style: normal;
   color: var(--col-dark);
   -webkit-font-smoothing: antialiased;
@@ -23671,6 +23671,10 @@ footer .footer__logo {
   content: "\f105  ";
   font-family: "Font Awesome 6 Free";
   font-weight: 600;
+}
+
+.wp-block-group.w-constrained .w-xl-50 {
+  width: 100% !important;
 }
 
 body {

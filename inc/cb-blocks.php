@@ -236,8 +236,15 @@ function modify_core_add_container($attributes, $content)
 {
     ob_start();
     // $class = $block['className'];
+
+    // if text is centred, then we limit the width on desktop
+    if ( $attributes["align"] == "center" ) {
+        $restrict_class = " px-3 px-xl-5 w-xl-50";
+    } else {
+        $restrict_class = " px-3 px-xl-5 w-xl-50";
+    }
     ?>
-<div class="container-xl">
+<div class="container-xl <?=$restrict_class?>">
     <?=$content?>
 </div>
 <?php
