@@ -246,7 +246,7 @@ add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
 function add_admin_link($items, $args)
 {
     if ($args->theme_location == 'primary_nav') {
-        $items .= '<li><a class="btn-nav-cta" title="Get a Quote" href="/contact/">Get a Quote</a></li>';
+        $items .= '<li><a class="btn-nav-cta" title="Contact Us" href="/contact/">Contact Us</a></li>';
     }
     return $items;
 }

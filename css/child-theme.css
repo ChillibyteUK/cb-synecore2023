@@ -23359,7 +23359,7 @@ footer .footer__logo {
 }
 .accreditations__flow img {
   max-width: 130px;
-  height: 100%;
+  height: auto;
   max-height: 85px;
 }
 .accreditations__caption {
