@@ -192,12 +192,30 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
-            'name'				=> 'cb_contact',
-            'title'				=> __('CB Contact'),
-            'category'			=> 'layout',
-            'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/cb_contact.php',
-            'mode'	=> 'edit',
+            'name'              => 'cb_contact',
+            'title'             => __('CB Contact'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_contact.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'              => 'cb_casenav',
+            'title'             => __('CB Case Study Navigation'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_casenav.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'              => 'cb_text_image',
+            'title'             => __('CB Text/Image'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_text_image.php',
+            'mode'  => 'edit',
             'supports' => array('mode' => false),
         ));
     }
@@ -238,10 +256,11 @@ function modify_core_add_container($attributes, $content)
     // $class = $block['className'];
 
     // if text is centred, then we limit the width on desktop
-    if ( $attributes["align"] == "center" ) {
-        $restrict_class = " px-3 px-xl-5 w-xl-50";
-    } else {
-        $restrict_class = " px-3 px-xl-5 w-xl-50";
+    $restrict_class = "";
+    if ( isset($attributes["align"]) ) {
+        if ( $attributes["align"] == "center" ) {
+            $restrict_class = " px-3 px-xl-5 w-xl-50";
+        } 
     }
     ?>
 <div class="container-xl <?=$restrict_class?>">

@@ -106,7 +106,7 @@ wp_head();
     <?php understrap_body_attributes(); ?>>
     <?php do_action('wp_body_open'); ?>
 <div id="wrapper-navbar" class="fixed-top">
-    <nav id="navbar" class="navbar navbar-expand-md d-block p-0 pt-2 pt-md-0" aria-labelledby="main-nav-label">
+    <nav id="navbar" class="navbar navbar-expand-md d-block p-0 pt-2" aria-labelledby="main-nav-label">
         <div class="container-xl py-2 nav-top align-items-center navbar-grid">
             <a href="/" class="logo d-none d-sm-block" aria-label="Synecore Homepage"><img src="<?=get_stylesheet_directory_uri()?>/img/synecore-logo.png"></a>
             <a href="/" class="logo--icon d-sm-none" aria-label="Synecore Homepage"><img src="<?=get_stylesheet_directory_uri()?>/img/synecore-icon.svg"></a>
