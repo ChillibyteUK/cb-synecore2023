@@ -23600,6 +23600,13 @@ footer .footer__logo {
   font-size: var(--fs-200);
 }
 
+.text_image__image img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .wp-block-quote--cb {
   position: relative;
   z-index: 0;
