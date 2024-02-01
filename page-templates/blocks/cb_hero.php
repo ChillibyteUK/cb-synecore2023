@@ -32,7 +32,7 @@ $class = $block['className'] ?? null ?: '';
 if (get_field('title') != null) {
     ?>
     <div class="hero__grid">
-        <div class="hero__content bg-dark">
+        <div class="hero__content bg-dark bg-opacity-75">
             <div class="hero__content--inner">
                 <h1 class="mb-4"><?=get_field('title')?></h1>
                 <?php
