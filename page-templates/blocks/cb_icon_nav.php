@@ -13,7 +13,7 @@ $class = $block['className'] ?? null ?: '';
                 }
                 ?>
                 <img src="<?=wp_get_attachment_image_url(get_sub_field('icon'))?>" alt="">
-                <div class="icon_nav__title h6 text-center"><?=get_the_title(get_sub_field('link'))?></div>
+                <div class="icon_nav__title h6 text-center text-black"><?=get_the_title(get_sub_field('link'))?></div>
                 <?php
                 if (get_sub_field('link')) {
                     echo '</a>';
