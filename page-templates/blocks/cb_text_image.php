@@ -4,7 +4,7 @@ $order_right = (get_field('order') == 'text') ? 'order-2 order-lg-2' : 'order-2 
 $bg = get_field('background_colour');
 ?>
 <!-- text_image -->
-<section class="text_image py-5 bg--<?=$bg?>">
+<section class="text_image py-5 bg-<?=$bg?> ">
     <div class="container animated wow fadeIn">
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center text_image__content <?=$order_left?>">
