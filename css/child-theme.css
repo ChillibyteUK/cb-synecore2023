@@ -23627,7 +23627,7 @@ footer .footer__logo {
   text-decoration: none;
   color: var(--color);
   border-left: 1px solid var(--border-color);
-  padding: 0.5rem 1rem;
+  padding: 1rem;
 }
 .services_nav .services__card h3, .services_nav .services__card .h3 {
   min-height: 5.7rem;
