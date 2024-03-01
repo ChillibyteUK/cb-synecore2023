@@ -18,10 +18,15 @@
             color: var(--color);
             border-left: 1px solid var(--border-color);
             padding: 1rem;
+            display: flex;
+            flex-direction: column;
             h3 {
                 min-height: 5.7rem;
                 max-width: 12ch;
                 margin-bottom: 0;
+            }
+            p {
+                margin-bottom: auto;
             }
             .icon_container {
                 aspect-ratio: 1 / 1;
