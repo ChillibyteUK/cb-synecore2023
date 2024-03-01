@@ -218,6 +218,16 @@ function acf_blocks()
             'mode'  => 'edit',
             'supports' => array('mode' => false),
         ));
+        acf_register_block_type(array(
+            'name'              => 'cb_services_nav',
+            'title'             => __('CB Services Nav'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_services_nav.php',
+            'keywords'          => array( 'services', 'nav' ),
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
     }
 }
 add_action('acf/init', 'acf_blocks');

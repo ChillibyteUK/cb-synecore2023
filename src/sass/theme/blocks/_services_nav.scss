@@ -1,0 +1,53 @@
+.services_nav {
+    --border-color: var(--col-blue-400);
+    &.dark {
+        --color: white;
+        background-color: var(--col-green-900);
+        color: var(--color);
+        --border-color: var(--color);
+    }
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+        &__card {
+            width: max(19%,240px);
+            flex-grow: 1;
+            text-decoration: none;
+            color: var(--color);
+            border-left: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            h3 {
+                min-height: 5.7rem;
+                max-width: 12ch;
+                margin-bottom: 0;
+            }
+            .icon_container {
+                aspect-ratio: 1 / 1;
+                width: 75%;
+                max-width: 130px;
+                margin-left: auto;
+                margin-bottom: 1rem;
+                overflow: hidden;
+                display: flex;
+                align-content: center;
+                img {
+                    aspect-ratio: 1 / 1;
+                    width: 75%;
+                    max-width: 100px;
+                    margin: auto;
+                    object-fit: contain;
+                    object-position: center;
+                    transition: transform 300ms ease;
+                    transform-origin: center;
+                }
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
