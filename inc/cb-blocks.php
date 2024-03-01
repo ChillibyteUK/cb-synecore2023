@@ -269,7 +269,7 @@ function modify_core_add_container($attributes, $content)
     $restrict_class = "";
     if ( isset($attributes["align"]) ) {
         if ( $attributes["align"] == "center" ) {
-            $restrict_class = " px-3 px-xl-5 w-xl-50";
+            $restrict_class = " px-3 px-xl-5 w-xl-75";
         } 
     }
     ?>
