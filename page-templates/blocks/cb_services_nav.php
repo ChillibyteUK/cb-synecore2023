@@ -20,7 +20,7 @@ $classes = (get_field('dark')[0] ?? null) == 'Yes' ? 'dark' : '';
             $s = get_sub_field('service');
             $img = get_sub_field('icon') ?: get_stylesheet_directory_uri() . '/img/missing-image.png';
             ?>
-            <a class="services__card text-white" href="<?=get_the_permalink($s)?>" style="background-color: <?=$bg_colour?>;">
+            <a class="services__card" href="<?=get_the_permalink($s)?>" style="background-color: <?=$bg_colour?>;">
                 <h3><?=get_the_title($s)?></h3>
                 <p class="<?=$paragraph_class?>"><?=get_sub_field('content')?></p>
                 <div class="icon_container"><img src="<?=$img?>"></div>
