@@ -4,24 +4,33 @@
         if (get_field('title')) {
             echo '<h2 class="h4 mb-4 text-center">' . get_field('title') . '</h2>';
         }
+
+        if( have_rows('badges_repeater') ):
         ?>
-        <div class="accreditations__flow">
-            <?php
-        foreach (get_field('badges') as $a) {
-            ?>
-            <div class="accreditaition__image">
-                <img src="<?=wp_get_attachment_image_url($a['ID'],'large')?>" alt="">
-            <?php
-            if (get_field('show_caption')[0] ?? null && get_field('show_caption')[0] == 'Yes') {
-                ?>
-                <div class="accreditations__caption"><?=$a['caption']?></div>
-                <?php
-            }
-            ?>
-            </div>
-            <?php
-        }
-            ?>
-        </div>
+                <div class="accreditations__flow">
+        <?php
+            while( have_rows('badges_repeater') ) : the_row();
+                $image = get_sub_field('image');
+                $title = get_sub_field('title');
+                $link = get_sub_field('link');
+                    ?>
+                    <div class="accreditaition__image">
+                        <?php
+                        if ( $link ) {
+                        ?>
+                        <a href="<?=$link;?>"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></a>
+                        <?php
+                        } else {
+                        ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php
+                        }
+                        ?>
+                        <div class="accreditations__caption"><?=$title?></div>
+                    </div>
+        <?php
+            endwhile;
+        endif;
+        ?>
     </div>
 </section>

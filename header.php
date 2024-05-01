@@ -138,7 +138,7 @@ wp_head();
                             'menu_class'      => 'navbar-nav justify-content-between w-100',
                             'fallback_cb'     => '',
                             'menu_id'         => 'navbarr',
-                            'depth'           => 2,
+                            'depth'           => 3,
                             'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
                         )
                     );
