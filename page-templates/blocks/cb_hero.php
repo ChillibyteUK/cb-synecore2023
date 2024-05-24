@@ -38,7 +38,7 @@ if (get_field('title') != null) {
                 <?php
                 if (get_field('content') != null) {
                     ?>
-                <div><?=get_field('content')?></div>
+                <div class="lh-base fs-5"><?=get_field('content')?></div>
                     <?php
                 }
                 ?>
