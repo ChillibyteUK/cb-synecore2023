@@ -13,5 +13,4 @@ $colour = get_field('theme') == 'Dark' ? 'bg-dark' : '';
         </div>
     </div>
 </div>
-?>
 </header>
