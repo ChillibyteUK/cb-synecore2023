@@ -12,6 +12,10 @@
   --col-blue: hsl(var(--hsl-col-blue));
   --col-red: hsl(var(--hsl-col-red));
   --col-red-200: hsl(var(--hsl-col-red-200));
+  --col-green-200: hsl( var(--hsl-green-200) );
+  --col-green-300: hsl( var(--hsl-green-300) );
+  --col-green-400: hsl( var(--hsl-green-400) );
+  --col-green-900: hsl( var(--hsl-green-900) );
   --h-top: 64px;
   --h-top-desktop: 90px;
   --fw-400: 300;
