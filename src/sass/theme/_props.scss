@@ -14,6 +14,11 @@ $col-grey: hsl(240, 4%, 91%);
     --hsl-col-red: 350 83% 42%;
     --hsl-col-red-200: 350 83% 62%;
 
+    --hsl-green-200: 165 53% 71%;
+    --hsl-green-300: 137 37% 73%;
+    --hsl-green-400: 155, 100%, 34%;
+    --hsl-green-900: 126, 40%, 18%;
+
     --col-dark: hsl(var(--hsl-col-dark));
     --col-light: hsl(var(--hsl-col-light));
     --col-grey: hsl(var(--hsl-col-grey));
